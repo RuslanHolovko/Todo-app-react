@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+body
+	background: #eee
+	font-family: Arial, sans-serif
+	font-size: 16px
+	line-height: 1.4
+
+input,
+button
+	border: none
+	outline: none
+
+button
+	appearance: none
+
+.todo
+	max-width: 400px
+	margin: 0 auto
+	padding-top: 10%
+
+.todoform
+	display: flex
+	height: 40px
+	box-shadow: 0 3px 15px 0 rgba(0,0,0,.1)
+	&:hover
+		box-shadow: 0 1px 10px 0 rgba(0,0,0,.1)
+	&__field,
+	&__btn
+		padding: 15px
+		text-transform: capitalize
+	&__field
+		color: #333
+		flex: auto
+		background: #fff
+		box-shadow: none
+	&__btn
+		background: lightblue
+		padding: 0
+		max-width: 100px
+		width: 100%
+		flex: auto
+		font-weight: 900
+		color: #555
+		transition: all .3s ease
+		&:hover
+			cursor: pointer
+			background: darken(lightblue, 10)
+			color: #222
+
+.list
+	padding: 10px 0
+
+.item
+	list-style-type: none
+	background: lighten(lightblue, 20)
+	height: 40px
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	margin-bottom: 5px
+	padding-left: 20px
+	&__text
+		margin-left: 20px
+		color: #666
+		letter-spacing: 1px
+	&__delete
+		color: #555
+		margin-left: auto
+		height: 100%
+		max-width: 100px
+		width: 100%
+		position: relative
+		flex: auto
+		font-size: 20px
+		font-weight: 700
+		background: tomato
+		transition: all .3s ease
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 4px
+			height: 20px
+			background: #333
+			transform-origin: center
+			border-radius: 4px
+		&:after
+			transform: translate(-50%, -50%) rotate(45deg)
+		&:before
+			transform: translate(-50%, -50%) rotate(-45deg)
+		&:hover
+			cursor: pointer
+			background: darken(tomato, 10)
+			color: #222
